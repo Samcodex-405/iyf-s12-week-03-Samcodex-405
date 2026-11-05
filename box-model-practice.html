@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LESSON 3 TASKS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="lesson3-page">
+    <h1 class="lesson3-title">LESSON 3 TASKS</h1>
+
+    <h2 class="lesson3-section-title">
+        Exercise 1 — Box Model Visualization
+    </h2>
+
+    <div class="lesson3-visual-margin">
+        Margin
+
+        <div class="lesson3-visual-border">
+            Border
+
+            <div class="lesson3-visual-padding">
+                Padding
+
+                <div class="lesson3-visual-content">
+                    Content
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <fieldset class="lesson3-code-fieldset">
+
+        <legend>Exercise 2 — Debug the layout</legend>
+
+        <pre><code>.broken-box {
+    width: 300px;
+    padding: 20px;
+    border: none;
+    box-sizing: border-box;
+}</code></pre>
+
+    </fieldset>
+
+    <h2 class="lesson3-section-title">
+        Exercise 3 — Card Component
+    </h2>
+
+    <article class="lesson3-card">
+
+        <img
+            class="lesson3-card-image"
+            src="https://imgs.search.brave.com/z4ucetFBwBF2CTu1-Nhp25-ZamAQhSUvry1OtX0iSpc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQvcmlsZXktZnJl/ZW1hbi10YzlrdXRm/NGxjM3U0ZjlyLmpw/Zw"
+            alt="Image of Riley Freeman from The Boondocks"
+        >
+
+        <section class="lesson3-card-content">
+
+            <h2>My Project</h2>
+
+            <p>
+                This is a short description of this project of making
+                a card with the exact description given in the repository.
+            </p>
+
+            <button type="button">View Project</button>
+
+        </section>
+
+    </article>
+
+    <fieldset class="lesson3-code-fieldset">
+
+        <legend>Task 3.3 — Typography System</legend>
+
+        <pre><code>:root {
+    /* Typography */
+
+    --font-sm: 0.875rem;     /* 14px */
+    --font-base: 1rem;       /* 16px */
+    --font-lg: 1.125rem;     /* 18px */
+    --font-xl: 1.25rem;      /* 20px */
+    --font-2xl: 1.5rem;      /* 24px */
+    --font-3xl: 2rem;        /* 32px */
+    --font-4xl: 3rem;        /* 48px */
+}</code></pre>
+
+    </fieldset>
+
+    <div class="lesson3-typography-demo">
+
+        <h2>Typography Preview</h2>
+
+        <h3>Heading Level 3</h3>
+
+        <p>
+            This is the base body text using the typography system.
+            The text is 16px by default.
+        </p>
+
+        <small>
+            This is small text using the 14px font size.
+        </small>
+
+    </div>
+
+    <fieldset class="lesson3-code-fieldset">
+
+        <legend>Task 3.4 — Colour Scheme</legend>
+
+        <pre><code>:root {
+    --primary: rgb(59, 96, 100);
+    --secondary: rgb(242, 143, 59);
+    --background: rgb(229, 244, 227);
+    --text: rgb(38, 54, 56);
+    --muted: rgb(107, 124, 126);
+
+    --primary-light: rgb(102, 136, 140);
+    --primary-dark: rgb(41, 69, 72);
+}</code></pre>
+
+    </fieldset>
+
+</body>
+
+</html>

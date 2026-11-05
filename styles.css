@@ -1,0 +1,959 @@
+
+/* =====================================================
+   SHANIZ ANN MUMBUA - PERSONAL PORTFOLIO
+   Theme: Warm Blush Pink, Powder Blue & Cream
+===================================================== */
+
+
+/* =====================================================
+   1. CSS VARIABLES
+===================================================== */
+
+:root {
+    --color-pink: #FCE7EF;
+    --color-pink-dark: #DCAFC4;
+    --color-rose: #B97896;
+
+    --color-blue: #DCEBFA;
+    --color-blue-dark: #526B87;
+    --color-blue-deep: #354D68;
+
+    --color-cream: #FFF9F6;
+    --color-white: #FFFFFF;
+
+    --color-text: #343746;
+    --color-muted: #727887;
+
+    --color-border: #EADDE3;
+
+    --shadow-soft: 0 8px 25px rgba(82, 107, 135, 0.09);
+    --shadow-hover: 0 14px 32px rgba(82, 107, 135, 0.15);
+
+    --radius-small: 10px;
+    --radius-medium: 18px;
+    --radius-large: 28px;
+
+    --transition: all 0.3s ease;
+}
+
+
+/* =====================================================
+   2. GLOBAL RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    background-color: var(--color-cream);
+    color: var(--color-text);
+    line-height: 1.7;
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--color-blue-dark);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-rose);
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button,
+input[type="submit"] {
+    cursor: pointer;
+}
+
+ul,
+ol {
+    padding-left: 25px;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.3;
+    color: var(--color-blue-deep);
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+h2 {
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    margin-bottom: 18px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+section {
+    padding: 55px 8%;
+}
+
+
+/* =====================================================
+   3. HEADER AND NAVIGATION
+===================================================== */
+
+header {
+    background-color: var(--color-white);
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 3px 15px rgba(82, 107, 135, 0.04);
+}
+
+header h1 {
+    font-size: 1.7rem;
+    color: var(--color-blue-deep);
+    letter-spacing: -0.5px;
+}
+
+/* Navigation list */
+
+.Nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Nav li {
+    list-style: none;
+}
+
+.Nav a {
+    display: inline-block;
+    padding: 9px 17px;
+    border-radius: 25px;
+    color: var(--color-text);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.Nav a:hover,
+.Nav a[aria-current="page"] {
+    background-color: var(--color-pink);
+    color: var(--color-rose);
+}
+
+
+/* =====================================================
+   4. MAIN CONTENT
+===================================================== */
+
+main {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+main > section:first-child {
+    margin-top: 0;
+}
+
+
+/* =====================================================
+   5. HOME PAGE - HERO SECTION
+===================================================== */
+
+.home-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 75px 8%;
+    background: linear-gradient(
+        120deg,
+        var(--color-cream),
+        var(--color-pink),
+        var(--color-blue)
+    );
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.welcome-text {
+    color: var(--color-rose);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.home-hero h2 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: var(--color-blue-deep);
+}
+
+.home-hero h2 span {
+    display: block;
+    color: var(--color-rose);
+}
+
+.hero-content > p {
+    color: var(--color-muted);
+    line-height: 1.9;
+    max-width: 600px;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 480px;
+    margin: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-hover);
+}
+
+.hero-image figcaption {
+    text-align: center;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+
+/* =====================================================
+   6. BUTTONS AND HERO LINKS
+===================================================== */
+
+.hero-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 28px;
+}
+
+.button,
+.secondary-button,
+button,
+input[type="submit"] {
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.button {
+    background-color: var(--color-pink-dark);
+    color: var(--color-blue-deep);
+}
+
+.secondary-button {
+    background-color: var(--color-blue);
+    color: var(--color-blue-deep);
+}
+
+.button:hover,
+.secondary-button:hover,
+button:hover,
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
+}
+
+.button:hover {
+    background-color: var(--color-rose);
+    color: var(--color-white);
+}
+
+.secondary-button:hover {
+    background-color: var(--color-blue-dark);
+    color: var(--color-white);
+}
+
+
+/* =====================================================
+   7. HOME PAGE - INTEREST CARDS
+===================================================== */
+
+.home-interests {
+    background-color: var(--color-pink);
+    text-align: center;
+}
+
+.home-interests > p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: var(--color-muted);
+}
+
+.interest-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.interest-card {
+    background-color: var(--color-white);
+    padding: 30px 25px;
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-soft);
+    text-align: left;
+    transition: var(--transition);
+}
+
+.interest-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow-hover);
+}
+
+.interest-card h3 {
+    color: var(--color-rose);
+}
+
+.interest-card p {
+    color: var(--color-muted);
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   8. HOME PAGE - HOBBIES AND CONTACT
+===================================================== */
+
+.home-hobbies {
+    background-color: var(--color-blue);
+}
+
+.home-hobbies > p {
+    max-width: 800px;
+}
+
+.home-hobbies ul {
+    margin-top: 20px;
+    line-height: 2;
+}
+
+.home-contact {
+    background-color: var(--color-cream);
+    text-align: center;
+}
+
+.home-contact > p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+
+/* =====================================================
+   9. ABOUT PAGE
+===================================================== */
+
+.about-page main > section,
+.About-page main > section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-page section:first-child,
+.About-page section:first-child {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: var(--color-pink);
+    border-radius: var(--radius-large);
+    margin: 35px auto;
+    width: 90%;
+}
+
+.about-page section:first-child img,
+.About-page section:first-child img {
+    width: 280px;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-soft);
+}
+
+.about-page section:first-child h2,
+.About-page section:first-child h2 {
+    color: var(--color-rose);
+}
+
+.about-page section:nth-child(even),
+.About-page section:nth-child(even) {
+    background-color: var(--color-blue);
+}
+
+.about-page section ul,
+.About-page section ul {
+    line-height: 2;
+}
+
+
+/* =====================================================
+   10. PROJECTS PAGE
+===================================================== */
+
+.projects-page main,
+.Projects-page main {
+    padding: 45px 8%;
+}
+
+.projects-page main > h2,
+.Projects-page main > h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.projects-page main > p,
+.Projects-page main > p {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+    color: var(--color-muted);
+}
+
+/* Supports common project card and grid class names */
+
+.project-grid,
+.projects-grid,
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card,
+.project {
+    background-color: var(--color-white);
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.project-card:hover,
+.project:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.project-card h3,
+.project h3 {
+    color: var(--color-rose);
+}
+
+.project-card p,
+.project p {
+    color: var(--color-muted);
+}
+
+.project-card ul,
+.project ul {
+    margin: 15px 0;
+    line-height: 1.9;
+}
+
+.project-status,
+.status {
+    display: inline-block;
+    background-color: var(--color-blue);
+    color: var(--color-blue-deep);
+    padding: 5px 13px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+
+/* =====================================================
+   11. GALLERY PAGE
+===================================================== */
+
+.gallery-page main,
+.Gallery-page main {
+    padding: 45px 8%;
+}
+
+.gallery-page main > h2,
+.Gallery-page main > h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.gallery-page main > p,
+.Gallery-page main > p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: var(--color-muted);
+}
+
+.gallery-grid,
+.photo-gallery,
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-grid figure,
+.photo-gallery figure,
+.gallery figure,
+.gallery-page figure,
+.Gallery-page figure {
+    background-color: var(--color-white);
+    padding: 12px;
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.gallery-grid figure:hover,
+.photo-gallery figure:hover,
+.gallery figure:hover,
+.gallery-page figure:hover,
+.Gallery-page figure:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.gallery-grid img,
+.photo-gallery img,
+.gallery img,
+.gallery-page figure img,
+.Gallery-page figure img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: var(--radius-small);
+}
+
+.gallery-grid figcaption,
+.photo-gallery figcaption,
+.gallery figcaption,
+.gallery-page figcaption,
+.Gallery-page figcaption {
+    padding: 12px 5px 5px;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+
+/* =====================================================
+   12. CONTACT PAGE
+===================================================== */
+
+.contact-page main,
+.Contact-page main {
+    max-width: 1000px;
+    padding: 45px 8%;
+}
+
+.contact-page main > h2,
+.Contact-page main > h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contact-page main > p,
+.Contact-page main > p {
+    text-align: center;
+    color: var(--color-muted);
+    margin-bottom: 30px;
+}
+
+.contact-page form,
+.Contact-page form {
+    background-color: var(--color-white);
+    padding: 35px;
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-soft);
+}
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+legend {
+    padding: 0 10px;
+    color: var(--color-rose);
+    font-weight: 700;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-blue-deep);
+    font-weight: 500;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+    width: 100%;
+    padding: 13px 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+    background-color: var(--color-cream);
+    color: var(--color-text);
+    outline: none;
+    transition: var(--transition);
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--color-rose);
+    box-shadow: 0 0 0 3px rgba(220, 175, 196, 0.2);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--color-rose);
+    margin-right: 8px;
+}
+
+input[type="submit"],
+.contact-page button,
+.Contact-page button {
+    background-color: var(--color-pink-dark);
+    color: var(--color-blue-deep);
+}
+
+input[type="submit"]:hover,
+.contact-page button:hover,
+.Contact-page button:hover {
+    background-color: var(--color-rose);
+    color: var(--color-white);
+}
+
+
+/* =====================================================
+   13. FOOTER
+===================================================== */
+
+footer {
+    background-color: var(--color-blue-deep);
+    color: var(--color-white);
+    text-align: center;
+    padding: 40px 8%;
+    margin-top: 40px;
+}
+
+footer h2,
+footer h3,
+footer h4 {
+    color: var(--color-white);
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    color: #E7EAF0;
+}
+
+footer a {
+    color: var(--color-pink);
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   14. GENERAL CARD STYLES
+===================================================== */
+
+article {
+    border-radius: var(--radius-medium);
+}
+
+article img {
+    border-radius: var(--radius-small);
+}
+
+blockquote {
+    background-color: var(--color-pink);
+    border-left: 5px solid var(--color-rose);
+    padding: 20px 25px;
+    margin: 25px 0;
+    border-radius: 0 var(--radius-small) var(--radius-small) 0;
+    color: var(--color-blue-deep);
+    font-style: italic;
+}
+
+
+/* =====================================================
+   15. TABLES
+===================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: var(--color-white);
+    border-radius: var(--radius-small);
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 14px;
+    border: 1px solid var(--color-border);
+    text-align: left;
+}
+
+th {
+    background-color: var(--color-blue);
+    color: var(--color-blue-deep);
+}
+
+tr:nth-child(even) {
+    background-color: #FFF5F8;
+}
+
+
+/* =====================================================
+   16. ACCESSIBILITY AND INTERACTION
+===================================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--color-rose);
+    outline-offset: 3px;
+}
+
+::selection {
+    background-color: var(--color-pink-dark);
+    color: var(--color-blue-deep);
+}
+
+
+/* =====================================================
+   17. RESPONSIVE DESIGN - TABLETS
+===================================================== */
+
+@media (max-width: 900px) {
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home-hero {
+        gap: 30px;
+    }
+
+    .interest-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid,
+    .photo-gallery,
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   18. RESPONSIVE DESIGN - MOBILE PHONES
+===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    header {
+        padding: 20px 5%;
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .Nav {
+        gap: 5px;
+    }
+
+    .Nav a {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    section {
+        padding: 40px 6%;
+    }
+
+    .home-hero {
+        flex-direction: column;
+        padding: 45px 6%;
+        text-align: center;
+    }
+
+    .home-hero h2 {
+        font-size: 2.1rem;
+    }
+
+    .hero-links {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        height: 260px;
+    }
+
+    .interest-list {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid,
+    .projects-grid,
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid,
+    .photo-gallery,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img,
+    .photo-gallery img,
+    .gallery img {
+        height: 250px;
+    }
+
+    .about-page section:first-child,
+    .About-page section:first-child {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-page section:first-child img,
+    .About-page section:first-child img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .contact-page form,
+    .Contact-page form {
+        padding: 20px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    .button,
+    .secondary-button {
+        text-align: center;
+    }
+
+    footer {
+        padding: 35px 6%;
+    }
+
+}
+
+
+/* =====================================================
+   19. REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}

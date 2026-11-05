@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Shaniz Ann Mumbua through email or the contact form.">
+    <title>Contact | Shaniz Ann Mumbua</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a class="logo" href="index.html">Shaniz.</a>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="contact-heading">
+            <h1 id="contact-heading">Get In Touch</h1>
+
+            <p>
+                Have a question, an idea, or an opportunity to collaborate?
+                I'd love to hear from you.
+            </p>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="full-name">Full Name</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="full-name"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="e.g. 0712345678"
+                        autocomplete="tel"
+                    >
+                </fieldset>
+
+                <fieldset>
+                    <legend>Message Details</legend>
+
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>
+                            Select a subject
+                        </option>
+                        <option value="general">General Inquiry</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="collaboration">Collaboration</option>
+                    </select>
+
+                    <label for="message">Your Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        minlength="50"
+                        placeholder="Write your message here (at least 50 characters)..."
+                        required
+                    ></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Newsletter Subscription</legend>
+
+                    <input
+                        type="checkbox"
+                        id="newsletter"
+                        name="newsletter"
+                        value="yes"
+                    >
+
+                    <label class="checkbox-label" for="newsletter">
+                        I would like to receive newsletters and updates.
+                    </label>
+                </fieldset>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+        </section>
+
+        <section aria-labelledby="social-heading">
+            <h2 id="social-heading">Connect With Me</h2>
+
+            <p>
+                GitHub:
+                <a
+                    href="https://github.com/Samcodex-405"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Visit my GitHub profile
+                </a>
+            </p>
+
+            <p>
+                Email:
+                <a href="mailto:shanizannmumbua@gmail.com">
+                    shanizannmumbua@gmail.com
+                </a>
+            </p>
+        </section>
+
+        <section aria-labelledby="location-heading">
+            <h2 id="location-heading">Location and Timezone</h2>
+
+            <address>
+                <p>Location: Kenya</p>
+                <p>Timezone: East Africa Time (EAT), UTC+3</p>
+            </address>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Shaniz Ann Mumbua. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
